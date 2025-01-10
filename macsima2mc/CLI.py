@@ -24,13 +24,13 @@ def get_args():
                     type=pathlib.Path,
                     help='Path where the stacks will be saved. If directory does not exist it will be created.'
                     )
-
+    #Optional arguments
     parser.add_argument('-rm',
                     '--reference_marker',
                     default='DAPI',
                     help='string specifying the name of the reference marker'
                     )
-
+    
     parser.add_argument('-od',
                     '--output_dir',
                     default='raw',

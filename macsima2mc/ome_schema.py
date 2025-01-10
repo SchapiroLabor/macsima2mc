@@ -5,6 +5,7 @@ from ome_types.model import OME,Image,Pixels,TiffData,Channel,Plane
 import platform
 
 
+
 def INPUTS(frame, conformed_markers):
     """
     This function creates a dictionary with the metadata of the tiles.
@@ -15,12 +16,14 @@ def INPUTS(frame, conformed_markers):
         dict: dictionary with the metadata of the tiles.
     """
 
-    features = frame.columns.values
-    inputs = {column:[] for column in features }
-    metadata = [frame.loc[ (frame['marker']==marker) & (frame['filter']==filt)] for marker, filt in conformed_markers]
-    for meta in metadata:
-        for f in features:
-            inputs[f].append(meta[f].values[0])
+    #features = frame.columns.values
+    #inputs = {column:[] for column in features }
+    #metadata = [frame.loc[ (frame['marker']==marker) & (frame['filter']==filt)] for marker, filt in conformed_markers]
+    #for meta in metadata:
+    #    for f in features:
+    #        inputs[f].append(meta[f].values[0])2
+    inputs=frame.to_dict('list')
+
     return inputs
 
 

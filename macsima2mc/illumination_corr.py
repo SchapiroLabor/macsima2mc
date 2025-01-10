@@ -28,6 +28,13 @@ def extract_channel_imgs (stack,indices):
 
     return stack[indices,:,:]
 
+def filter_out_blanks(channel_tiles):
+
+    signal_indices=[index for index in range(0,channel_tiles.shape[0]) if np.sum(channel_tiles[index,:,:])>0 ]
+    filtered_tiles=channel_tiles[signal_indices,:,:]
+    return filtered_tiles
+
+
 
 def apply_corr(uncorr_stack,no_of_channels):
     """
@@ -46,7 +53,9 @@ def apply_corr(uncorr_stack,no_of_channels):
 
     for ind_list in indices:
         uncorr_imgs = extract_channel_imgs(uncorr_stack, ind_list)
-        basic.fit(uncorr_imgs)
+        imgs_for_ffp=filter_out_blanks(uncorr_imgs)
+        #basic.fit(uncorr_imgs)
+        basic.fit(imgs_for_ffp)
         ffp = basic.flatfield
         corr_stack[ind_list,:,:] = np.uint16(np.clip(uncorr_imgs.astype(float) / ffp, 0, 65535))
 

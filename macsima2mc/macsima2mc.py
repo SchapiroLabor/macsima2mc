@@ -22,7 +22,8 @@ def main():
 
     # Create stack
     cycle_info = tools.append_metadata( cycle_info )
-    #cycle_info.to_csv( args.output / 'cycle_{c}_info.csv'.format(c=f'{6:03d}'), index=False )
+    
+    #cycle_info.to_csv( args.output / 'cycle_{c}_info.csv'.format(c=f'{1:03d}'), index=False )
     output_dirs = tools.create_stack(cycle_info,
                                      output,
                                      ref_marker=ref,
