@@ -23,11 +23,11 @@ The script takes as main input the path to the cycle folder that cointains the r
 ### download container:
 - Docker
 ```
-docker pull ghcr.io/schapirolabor/multiplex_macsima:v1.1.0
+docker pull ghcr.io/schapirolabor/macsima2mc:v1.1.1
 ```
 - Singularity
 ```
-singularity pull docker://ghcr.io/schapirolabor/multiplex_macsima:v1.1.0
+singularity pull docker://ghcr.io/schapirolabor/macsima2mc:v1.1.1
 ```
 ### Script execution
 
