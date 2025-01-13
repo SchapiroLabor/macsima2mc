@@ -1,4 +1,3 @@
-from tkinter.font import names
 from templates import info_dic
 import re
 import pandas as pd
