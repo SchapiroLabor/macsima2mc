@@ -47,7 +47,7 @@ def get_patterns():
 
     patterns = {
         'cycle_number': (r"cycle-(.*?)-", True),
-        'marker_name' : (r"markers-(.*?)-",False),
+        'marker_name' : (r"markers-(.*?)-filters",False),
         'Filter'      : (r"-filters-(.*?).ome",False),
         'background'  : (r"-src-(.*?)-" ,False)
         }
