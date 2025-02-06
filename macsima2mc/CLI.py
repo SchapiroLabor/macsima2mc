@@ -31,8 +31,8 @@ def get_args():
                     help='string specifying the name of the reference marker'
                     )
     
-    parser.add_argument('-od',
-                    '--output_dir',
+    parser.add_argument('-osd',
+                    '--output_subdir',
                     default='raw',
                     help='string specifying the name of the subfolder in which the staged images will be saved'
                     )
@@ -53,7 +53,20 @@ def get_args():
     parser.add_argument('-rr',
                     '--remove_reference_marker',
                     action='store_true',
-                    help='It will mark the removal of the reference markers in the markers.csv except for the first cycle.'
+                    help='It will mark the removal of the reference markers in the markers.csv file except for the first cycle.  Use this when you \
+                        dont want to keep e.g. the DAPI images of the other cycles.'
+                    )
+    
+    parser.add_argument('-qc',
+                    '--qc_metrics',
+                    action='store_true',
+                    help='measure features of contrast, intensity and sharpness of each image'
+                    )
+    
+    parser.add_argument('-wt',
+                    '--write_table',
+                    action='store_true',
+                    help='writes a table in --output_subdir'
                     )
 
     args=parser.parse_args()

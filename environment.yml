@@ -8,4 +8,5 @@ dependencies:
   - conda-forge::tifffile
   - pandas
   - conda-forge::beautifulsoup4
+  - anaconda::scikit-image
 prefix: C:\Users\VictorP\anaconda3\envs\staging_env

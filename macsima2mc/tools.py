@@ -7,7 +7,7 @@ import numpy as np
 from pathlib import Path
 import ome_writer
 import exceptions as expt
-import illumination_corr
+#import illumination_corr
 
 
 def merge_dicts(list_of_dicts):
@@ -123,9 +123,9 @@ def append_metadata(cycle_info_df):
     Returns:
         pd.DataFrame: dataframe with the metadata appended to the cycle_info dataframe as new columns.
     """
-    pos=list( map(extract_metadata, cycle_info_df['full_path'].values) )
+    meta_feats=list( map(extract_metadata, cycle_info_df['full_path'].values) )
 
-    for key, val in merge_dicts(pos).items():
+    for key, val in merge_dicts(meta_feats).items():
         cycle_info_df.insert(loc=cycle_info_df.shape[1], column=key, value=val)
 
     return cycle_info_df

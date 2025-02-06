@@ -55,11 +55,12 @@ def get_patterns():
     return patterns
 
 
-def write_markers_file( data_path, ref_marker='DAPI'):
+def write_markers_file( data_path, rm_ref_marker,ref_marker='DAPI'):
     """
     This function writes the markers.csv file.
     Args:
         data_path (Path): path to the folder containing the images.
+        rm_ref_marker(Boolean): mark reference markers for removal except for the first one
         ref_marker (str): reference marker.
     Returns:
         dict: dictionary with the columns of the markers.csv file.
@@ -99,6 +100,11 @@ def write_markers_file( data_path, ref_marker='DAPI'):
 
     mks_file['channel_number'] = list(range(1, 1 + len(mks_file['marker_name'])))
     mks_file_df = DataFrame(mks_file)
+    if rm_ref_marker:
+        earliest_cycle=mks_file_df['cycle_number'].min()
+        condition=( mks_file_df['marker_name']== ref_marker ) & ( mks_file_df['cycle_number']>earliest_cycle ) 
+        mks_file_df.loc[ condition , ['remove'] ]=True
+    
     mks_file_df.to_csv( data_path.parent.absolute() / 'markers.csv' , index=False )
 
     return mks_file
