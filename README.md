@@ -15,10 +15,12 @@ The script takes as main input the path to the cycle folder that cointains the r
 | Argument|Type|Long name| Description | Default value |
 |---------|----|---------|-------------|---------------|
 |-rm|string | --reference_marker | Name of the reference marker for registration|'DAPI'|
-|-od|string | --output_dir | String specifying the name of the subfolder in which the staged images will be saved.|'raw'|
+|-osd|string | --output_subdir | String specifying the name of the subfolder in which the staged images will be saved.|'raw'|
 |-ic|boolean flag | --illumination_correction |Give this flag to apply illumination correction to all tiles, the illumination profiles are calculated with basicpy | FALSE |
 |-he|boolean flag | --hi_exposure_only |Give this flag to extract only the set of images with the highest exposure time|FALSE|
-
+|-rr|boolean flag | --remove_reference_marker |mark the removal of the reference marker ,e.g. DAPI, for all cycles except the first one |FALSE|
+|-qc|boolean flag | --qc_metrics | measure features of contrast, intensity and sharpness of each tile in the cycle and appends them to a table |FALSE|
+|-wt|boolean flag | --write_table | writes a table with the acquisition parameters, metadata and,if enabled, qc metrics of each tile. Table will be saved in --output/cycle_info   |FALSE|
 ## Container usage
 ### download container:
 - Docker
