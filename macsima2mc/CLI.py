@@ -66,7 +66,7 @@ def get_args():
     parser.add_argument('-wt',
                     '--write_table',
                     action='store_true',
-                    help='writes a table in --output_subdir'
+                    help='writes a table in --output/cycle_info. Content of table is acquisition parameters, metadata and, if enabled, qc metrics of each tile'
                     )
 
     args=parser.parse_args()
