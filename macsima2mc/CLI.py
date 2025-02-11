@@ -63,6 +63,12 @@ def get_args():
                     help='measure features of contrast, intensity and sharpness of each image'
                     )
     
+    parser.add_argument('-oqc',
+                    '--only_qc_file',
+                    action='store_true',
+                    help='skips the stacking of the tiles and only calculates the qc table. Still flag -wt is required to write the table. '
+                    )
+    
     parser.add_argument('-wt',
                     '--write_table',
                     action='store_true',

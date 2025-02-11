@@ -103,7 +103,7 @@ def write_markers_file( data_path, rm_ref_marker,ref_marker='DAPI'):
     if rm_ref_marker:
         earliest_cycle=mks_file_df['cycle_number'].min()
         condition=( mks_file_df['marker_name']== ref_marker ) & ( mks_file_df['cycle_number']>earliest_cycle ) 
-        mks_file_df.loc[ condition , ['remove'] ]=True
+        mks_file_df.loc[ condition , ['remove'] ]='TRUE'
     
     mks_file_df.to_csv( data_path.parent.absolute() / 'markers.csv' , index=False )
 
