@@ -1,9 +1,9 @@
 import pandas as pd
 from skimage.measure import blur_effect
 from tifffile import imread
-from macsima2mc.tools import merge_dicts
 import numpy as np
 from multiprocessing import Pool
+from macsima2mc.tools import merge_dicts
 
 
 def contrast(img):
