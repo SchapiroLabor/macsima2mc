@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "macsima2mc"
-version = "1.2.5"
+version = "1.2.6"
 authors = [
     {name = "Victor Perez", email = "hhabraxas@gmail.com"},
     {name = "Miguel A. Ibarra-Arellano", email = "c180l058j@mozmail.com"}
