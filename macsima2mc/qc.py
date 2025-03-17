@@ -1,7 +1,7 @@
 import pandas as pd
 from skimage.measure import blur_effect
 from tifffile import imread
-from tools import merge_dicts
+from macsima2mc.tools import merge_dicts
 import numpy as np
 from multiprocessing import Pool
 
