@@ -1,4 +1,4 @@
-import ome_schema as schema
+import macsima2mc.ome_schema as schema
 import pandas as pd
 
 
