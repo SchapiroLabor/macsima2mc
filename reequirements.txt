@@ -1,0 +1,7 @@
+ome-types=0.5.2
+numpy
+tifffile
+pandas
+beautifulsoup4
+scikit-image
+BaSiCPy
