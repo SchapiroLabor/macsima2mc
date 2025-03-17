@@ -5,9 +5,9 @@ import tifffile as tifff
 from bs4 import BeautifulSoup
 import numpy as np
 from pathlib import Path
-import macsima2mc.ome_writer
+import macsima2mc.ome_writer as ome_writer
 import macsima2mc.exceptions as expt
-import macsima2mc.illumination_corr
+import macsima2mc.illumination_corr as illumination_corr
 
 
 def merge_dicts(list_of_dicts):
