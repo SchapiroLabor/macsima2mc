@@ -1,4 +1,4 @@
-from templates import info_dic
+from macsima2mc.templates import info_dic
 import re
 import pandas as pd
 import tifffile as tifff
