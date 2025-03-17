@@ -1,4 +1,4 @@
-ome-types=0.5.2
+ome-types==0.5.2
 numpy
 tifffile
 pandas
