@@ -18,7 +18,7 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: BSD License"
 ]
-requires-python = "3.12"
+requires-python = ">=3.12"
 dependencies = [
     "ome-types==0.5.2",
     "numpy",
