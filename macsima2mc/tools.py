@@ -7,7 +7,7 @@ import numpy as np
 from pathlib import Path
 import ome_writer
 import exceptions as expt
-#import illumination_corr
+import illumination_corr
 
 
 def merge_dicts(list_of_dicts):
