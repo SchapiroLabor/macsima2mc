@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "macsima2mc"
+version = "1.2.3"
+authors = [
+    {name = "Victor Perez", email = "hhabraxas@gmail.com"},
+    {name = "Miguel A. Ibarra-Arellano", email = "c180l058j@mozmail.com"}
+]
+license = {text = "BSD-3-Clause"}
+description = "stages MACSima tiles for registration with ASHLAR in MCMICRO."
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License"
+]
+requires-python = "3.12"
+dependencies = [
+    "ome-types==0.5.2",
+    "numpy",
+    "tifffile",
+    "pandas",
+    "beautifulsoup4",
+    "scikit-image",
+    "BaSiCPy"
+]
+keywords = [
+    "mcmicro",
+    "multiplex imaging",
+    "proteomics",
+    "macsima",
+    "staging"
+]
+
+[tool.setuptools]
+packages = ["macsima2mc"]
+include-package-data = true
+
+[project.scripts]
+macsima2mc = "macsima2mc.macsima2mc:main"
+
+[project.urls]
+Homepage = "https://github.com/SchapiroLabor/macsima2mc"
+Issues = "https://github.com/SchapiroLabor/macsima2mc/issues"
