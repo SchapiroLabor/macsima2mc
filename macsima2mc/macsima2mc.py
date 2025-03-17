@@ -1,7 +1,7 @@
-import tools
-from templates import macsima_pattern
-import CLI
-import mc_tools
+import macsima2mc.tools as tools
+from macsima2mc.templates import macsima_pattern
+import macsima2mc.CLI as CLI
+import macsima2mc.mc_tools as mc_tools
 
 def main():
     # Get arguments
