@@ -8,3 +8,4 @@ from macsima2mc import ome_writer
 from macsima2mc import qc
 from macsima2mc import templates
 from macsima2mc import tools
+from macsima2mc import version
