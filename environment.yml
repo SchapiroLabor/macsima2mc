@@ -11,3 +11,4 @@ dependencies:
   - anaconda::scikit-image
   - pip:
     - "BaSiCPy"
+    - "macsima2mc"
