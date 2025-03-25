@@ -1,13 +1,13 @@
-from macsima2mc.templates import info_dic
+from templates import info_dic
 import re
 import pandas as pd
 import tifffile as tifff
 from bs4 import BeautifulSoup
 import numpy as np
 from pathlib import Path
-import macsima2mc.ome_writer as ome_writer
-import macsima2mc.exceptions as expt
-import macsima2mc.illumination_corr as illumination_corr
+import ome_writer
+import exceptions as expt
+import illumination_corr
 
 
 def merge_dicts(list_of_dicts):

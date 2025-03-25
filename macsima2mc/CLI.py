@@ -1,6 +1,6 @@
 import argparse
 import pathlib
-from macsima2mc.version import __version__
+
 
 #---CLI-BLOCK---#
 def get_args():
@@ -75,13 +75,6 @@ def get_args():
                     action='store_true',
                     help='writes a table in --output/cycle_info. Content of table is acquisition parameters, metadata and, if enabled, qc metrics of each tile'
                     )
-
-    parser.add_argument('-v',
-                    '--version',
-                    dest='version',
-                    action='version',
-                    version=f"%(prog)s {__version__}"
-    )
 
     args=parser.parse_args()
 
