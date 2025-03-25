@@ -3,9 +3,8 @@ FROM mambaorg/micromamba:latest
 LABEL maintainer="Victor Perez"
 
 # Set the base layer for micromamba and copy the environment file
-USER root
-COPY environment.yml .
-# Update package manager and install essential build tools procps is required for Nextflow/nf-core
+COPY --chown=$MAMBA_USER:$MAMBA_USER environment.yml /tmp/env.yaml
+
 RUN apt-get update -qq && apt-get install -y \
     build-essential \
     ffmpeg \
@@ -13,21 +12,15 @@ RUN apt-get update -qq && apt-get install -y \
     libxext6 \
     procps
 
-# Set the environment variable for the root prefix
-ARG MAMBA_ROOT_PREFIX=/opt/conda
+RUN micromamba install -y -n base -f /tmp/env.yaml && \
+    micromamba clean --all --yes
 
-# Add /opt/conda/bin to the PATH
-ENV PATH $MAMBA_ROOT_PREFIX/bin:$PATH
-
-# Install dependencies with micromamba, clean afterwards
-RUN micromamba env create -f environment.yml \
-    && micromamba clean --all --yes
-
-# Add environment to PATH
 ENV PATH="${PATH}:/opt/conda/bin"
 
-# Set the working directory
 WORKDIR /staging
 
-# Copy contents of the folder to the working directory
 COPY . .
+# Update package manager and install essential build tools procps is required for Nextflow/nf-core
+
+
+
