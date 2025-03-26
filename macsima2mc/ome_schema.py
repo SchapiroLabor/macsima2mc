@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import ome_types
-from uuid import uuid4
+#from uuid import uuid4
 from ome_types.model import OME,Image,Pixels,TiffData,Channel,Plane
 import platform
 
@@ -173,7 +173,7 @@ def OME_metadata(image_block):
                         )
 
     ome.images = image_block
-    ome.uuid = uuid4().urn
+    #ome.uuid = uuid4().urn
     ome_xml = ome_types.to_xml(ome)
 
     return ome, ome_xml
