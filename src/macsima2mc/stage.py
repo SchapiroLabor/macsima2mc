@@ -4,6 +4,7 @@ import pathlib
 #local scripts
 from . import tools
 from . import mc_tools
+from . import qc
 from .templates import macsima_pattern
 from .version import __version__
 
@@ -130,7 +131,6 @@ def main():
 
     # Calculate and append ome metadata info contained in each file
     if (args.qc_metrics or args.only_qc_file) :
-        import qc
         cycle_info=qc.append_qc(cycle_info)
 
     if args.write_table:
