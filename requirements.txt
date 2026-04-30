@@ -1,7 +1,0 @@
-    ome-types==0.5.2
-    numpy==1.26.4
-    tifffile==2026.3.3
-    pandas==2.3.3
-    beautifulsoup4==4.14.3
-    scikit-image==0.26.0
-    BaSiCPy==2.0.0
