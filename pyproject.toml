@@ -40,7 +40,7 @@ keywords = [
 ]
 
 [tool.setuptools.packages.find]
-where = ["src"]  
+where = ["src"]
 
 [tool.setuptools]
 include-package-data = true
