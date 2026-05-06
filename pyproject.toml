@@ -14,7 +14,9 @@ description = "restructures MACSima raw .tif tiles into an .ome.tif stack ready 
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3.12",
-    "Operating System :: OS Independent",
+    "Operating System :: Linux",
+    "Operating System :: MacOS",
+    "Operating System :: Windows",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: BSD License"
 ]
