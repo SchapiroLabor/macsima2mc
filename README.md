@@ -3,7 +3,6 @@
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/macsima2mc?style=flat-square)](https://pypi.org/project/macsima2mc/)
 [![PyPI - License](https://img.shields.io/pypi/l/macsima2mc?style=flat-square)](https://pypi.org/project/macsima2mc/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/macsima2mc?style=flat-square)](https://pypi.org/project/macsima2mc/)
-[![main](https://github.com/saezlab/liana-py/actions/workflows/main.yml/badge.svg)](https://github.com/schapirolabor/macsima2mc/actions)
 
 The tool macsima2mc stages MACSima data sets for being registered with ASHLAR in MCMICRO.
 
