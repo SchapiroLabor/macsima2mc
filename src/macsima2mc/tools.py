@@ -398,7 +398,7 @@ def create_stack(cycle_info_df,
         else:
             out['output_paths'].append(stack_output_dir)
             tifff.imwrite( stack_file_path , stack, photometric='minisblack' )
-            ome,ome_xml = ome_writer.create_ome(group, conformed_markers)
+            ome,ome_xml = ome_writer.create_ome(conformed_group, conformed_markers)
             tifff.tiffcomment(stack_file_path, ome_xml)
         
     if extended_outputs:
